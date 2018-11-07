@@ -20,7 +20,7 @@ matrix:
 env:
   - GO111MODULE=on
 
-#install: true
+install: false
 
 branches:
   only:
