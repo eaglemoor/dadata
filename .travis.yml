@@ -1,11 +1,11 @@
-go_import_path: gopkg.in/webdeskltd/dadata.v2
+go_import_path: github.com/webdeskltd/dadata
 language: go
 sudo: false
 
 go:
-  - "1.7.x"
-  - "1.8.x"
-  - "1.9.x"
+#  - "1.7.x"
+#  - "1.8.x"
+#  - "1.9.x"
   - "1.10.x"
   - "1.11.x"
   - master
@@ -21,12 +21,11 @@ branches:
   - master
   - 2
 
-notifications:
-  email:
-    on_success: change
-    on_failure: always
+#notifications:
+#  email:
+#    on_success: change
+#    on_failure: always
 
 script:
-  - go install ./...
-  - diff -u <(echo -n) <(gofmt -d .)
-  - go test -v ./...
+  - go install .
+  - go test -v .
