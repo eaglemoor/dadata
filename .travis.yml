@@ -8,7 +8,7 @@ go:
 #  - "1.9.x"
   - "1.10.x"
   - "1.11.x"
-  - master
+#  - master
 
 env:
   - GO111MODULE=on
@@ -27,5 +27,5 @@ branches:
 #    on_failure: always
 
 script:
-  - go install .
-  - go test -v .
+  - go install ./...
+  - go test -v ./...
