@@ -6,10 +6,6 @@ import (
 )
 
 func TestDaData_ProfileBalance(t *testing.T) {
-	// for current date we can check if stat is really more than 0
-	// for sure - we need some call to api
-	newCleaner().CleanNames("алекс")
-
 	daData := newBalance()
 	got, err := daData.ProfileBalance(context.Background())
 	if err != nil {
