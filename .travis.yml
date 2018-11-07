@@ -6,16 +6,9 @@ sudo: false
 #  - "1.7.x"
 #  - "1.8.x"
 #  - "1.9.x"
-#  - "1.10.x"
-#  - "1.11.x"
+  - "1.10.x"
+  - "1.11.x"
 #  - master
-
-matrix:
-  include:
-    - go: "1.10.x"
-      script:  go test -v ./...
-    - go: "1.11.x"
-      script: go test -v -mod=vendor ./...
 
 env:
   - GO111MODULE=on
@@ -26,14 +19,11 @@ branches:
   - master
   - 2
 
-install: true
-
 #notifications:
 #  email:
 #    on_success: change
 #    on_failure: always
 
-#script:
-#  - go get -t -v ./...
-#  - go install ./...
-#  - go test -v ./...
+script:
+  - go get -t -v ./...
+  - go test -v ./...
