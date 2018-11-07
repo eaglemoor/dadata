@@ -19,6 +19,7 @@ branches:
   only:
   - v2
   - master
+  - 2
 
 notifications:
   email:
